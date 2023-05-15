@@ -19,11 +19,12 @@ class CalculatorControllerTest {
 
     @Test
     void calculateVacationPay() throws Exception {
+
         this.mockMvc
-                .perform(get("/calculate?salary=30000&countDays=15"))
+                .perform(get("/calculate?salary=30000&startDate=2022-12-30&endDate=2023-01-11"))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.jsonPath("calculationResult")
-                        .value("15000"));
+                        .value("4000"));
 
     }
 }

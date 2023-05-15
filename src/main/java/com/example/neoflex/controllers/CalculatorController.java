@@ -5,16 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @RestController
 public class CalculatorController {
@@ -64,7 +60,7 @@ public class CalculatorController {
             }
 
             calendarForCheckingWeekends.setTime(Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
-            if(calendarForCheckingWeekends.get(Calendar.DAY_OF_WEEK) == 1 || calendarForCheckingWeekends.get(Calendar.DAY_OF_WEEK) == 7){
+            if(calendarForCheckingWeekends.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY || calendarForCheckingWeekends.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){
                 countHoliday++;
             }
         }

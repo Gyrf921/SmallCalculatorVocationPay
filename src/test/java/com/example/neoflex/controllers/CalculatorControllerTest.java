@@ -25,6 +25,5 @@ class CalculatorControllerTest {
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.jsonPath("calculationResult")
                         .value("4000"));
-
     }
 }

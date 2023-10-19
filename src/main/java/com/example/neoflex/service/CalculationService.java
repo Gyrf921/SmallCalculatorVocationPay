@@ -8,6 +8,7 @@ public interface CalculationService {
 
     /**
      * A method that calculates vacation pay for an employee based on his salary, the start date of the vacation and the end date
+     *
      * @param infoForVacationPayDTO - information about employers salary, and dates for vocation
      * @return - vocation pay
      */

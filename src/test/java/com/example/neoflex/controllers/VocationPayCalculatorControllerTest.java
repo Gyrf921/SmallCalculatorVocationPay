@@ -12,7 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 
 @SpringBootTest
 @AutoConfigureMockMvc //simulating a http request without a server
-class CalculatorControllerTest {
+class VocationPayCalculatorControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
